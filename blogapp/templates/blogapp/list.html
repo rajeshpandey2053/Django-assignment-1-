@@ -1,0 +1,18 @@
+{% extends 'blogapp/main.html' %}
+
+{% block content %}
+	
+
+<br>
+{% for u in data %}
+
+<div class="card border-info mb-3" style="max-width: 30rem;">
+    <div class="card-header">{{u.author}}</div>
+    <div class="card-body text-info">
+      <p class="card-text">{{u.blogs}}</p>
+      <p class="card-text"><small class="text-muted">Last updated: {{u.modified_at}}</small></p>
+    </div>
+</div>
+    {% endfor %}
+
+{% endblock %}
